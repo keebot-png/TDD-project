@@ -1,7 +1,7 @@
 class Solver
   def factorial(num)
-    return "Wrong input, please provide positive integer numbers!" unless num >= 0
-    return 1 if num == 0
+    return 'Wrong input, please provide positive integer numbers!' unless num >= 0
+    return 1 if num.zero?
 
     num * factorial(num - 1)
   end
@@ -12,13 +12,13 @@ class Solver
 
   def fizzbuzz(num)
     if (num % 15).zero?
-        return 'fizzbuzz'
+      'fizzbuzz'
     elsif (num % 3).zero?
-        return 'fizz'
+      'fizz'
     elsif (num % 5).zero?
-        return 'buzz'
+      'buzz'
     else
-        return num       i
-     end
+      num i
+    end
   end
 end
