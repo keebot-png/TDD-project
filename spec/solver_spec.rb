@@ -9,6 +9,8 @@ describe Solver do
   describe '#factorial' do
     it 'successfully implements the mathematical factorial method' do
       expect(@solver.factorial(5)).to eq 120
+      expect(@solver.factorial(-5)).to eq 'Wrong input, please provide positive integer numbers!'
+      expect(@solver.factorial(0)).to eq 1
     end
   end
 
@@ -20,7 +22,7 @@ describe Solver do
 
   describe '#fizzbuzz' do
     it 'returns constructed string' do
-      expect(@solver.fizzbuzz(15)).to eq '1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz'
+      expect(@solver.fizzbuzz(15)).to eq 'fizzbuzz'
     end
   end
 end
